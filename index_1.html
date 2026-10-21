@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Hitesh Naik — AI/ML Product Leader. Enterprise feature stores, data platforms, GenAI and agentic AI systems. 16+ years across retail, fintech and telecom.">
+<meta name="color-scheme" content="light dark">
+<title>Hitesh Naik</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single long column with a sticky section nav; a wide, ruled career-arc band breaks the column once. Accent is NDVI green (vegetation index), borrowed from the satellite work. */
+:root{
+  --bg:#f7f8f4;
+  --surface:#ffffff;
+  --fg:#17211c;
+  --muted:#5b6a61;
+  --rule:#d9ded8;
+  --accent:#4f8a2a;
+  --accent-ink:#2f5b17;
+  --accent-soft:#e7f0dc;
+  --era1:#c9d4cf; --era2:#b9d6a3; --era3:#7fbf4d;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101614; --surface:#171f1b; --fg:#e8ede6; --muted:#9aa89f; --rule:#2a342e;
+    --accent:#8fd15a; --accent-ink:#b9e58f; --accent-soft:#1f2d1a;
+    --era1:#2a3530; --era2:#2f4a26; --era3:#4f8a2a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101614; --surface:#171f1b; --fg:#e8ede6; --muted:#9aa89f; --rule:#2a342e;
+  --accent:#8fd15a; --accent-ink:#b9e58f; --accent-soft:#1f2d1a;
+  --era1:#2a3530; --era2:#2f4a26; --era3:#4f8a2a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance;font-weight:600}
+p{margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
+.sub{color:var(--muted);font-family:var(--display);font-size:15px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;text-decoration:none;font-size:17px}
+.links{display:flex;gap:4px 18px;flex-wrap:wrap;font-family:var(--display);font-size:14px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--fg)}
+
+/* hero */
+.hero{padding-block:56px 40px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:start}
+.hero h1{font-size:clamp(40px,7vw,72px);font-weight:700;letter-spacing:-.02em;margin:10px 0 14px}
+.tag{font-size:clamp(19px,2.4vw,24px);font-family:var(--display);font-weight:500;max-width:30ch}
+.tag em{font-style:normal;color:var(--accent-ink)}
+.contact-row{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-family:var(--display);font-size:15px;align-items:center}
+.pill{background:var(--accent-soft);color:var(--accent-ink);padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600}
+.portrait{width:168px;height:168px;border-radius:50%;background:var(--era2);display:grid;place-items:center;font-family:var(--display);font-size:52px;font-weight:700;color:var(--accent-ink);border:4px solid var(--surface);box-shadow:0 0 0 1px var(--rule)}
+.logos{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline;padding-block:14px 0;border-top:1px solid var(--rule);font-family:var(--display);font-size:15px;color:var(--muted)}
+.logos b{font-weight:600;color:var(--fg)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:28px}
+.stat{background:var(--surface);padding:18px 16px}
+.stat b{display:block;font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted);line-height:1.35}
+
+/* sections */
+section{padding-block:64px;border-top:1px solid var(--rule)}
+.shead{display:grid;grid-template-columns:1fr auto;gap:8px 24px;align-items:end;margin-bottom:32px}
+.shead h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.015em}
+.two{display:grid;grid-template-columns:3fr 2fr;gap:40px}
+.two>*{min-width:0}
+.prose p+p{margin-top:16px}
+.prose{max-width:62ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-content:start}
+.chips span{font-family:var(--display);font-size:14px;padding:6px 11px;border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
+
+/* arc */
+.arc{background:var(--surface)}
+.arcbox{overflow-x:auto;border:1px solid var(--rule);background:var(--bg)}
+.arcbox svg{display:block;min-width:820px;width:100%;height:auto}
+.arcnote{font-size:14px;color:var(--muted);margin-top:12px}
+
+/* deliverables */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--rule);padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card h3{font-size:22px;letter-spacing:-.01em}
+.card p{font-size:16px}
+.outcome{margin-top:auto;padding-top:12px;border-top:1px dashed var(--rule);font-family:var(--display);font-size:15px}
+.outcome i{font-style:normal;color:var(--accent-ink);font-weight:600;margin-right:8px}
+blockquote{margin:40px 0 0;font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:500;max-width:26ch;letter-spacing:-.01em}
+blockquote+p{margin-top:8px;color:var(--muted);font-size:14px}
+
+/* experience */
+.job{display:grid;grid-template-columns:220px 1fr;gap:12px 36px;padding-block:28px;border-top:1px solid var(--rule)}
+.job:first-of-type{border-top:0;padding-top:0}
+.job>*{min-width:0}
+.meta{font-family:var(--mono);font-size:12.5px;color:var(--muted);line-height:1.7}
+.meta b{display:block;color:var(--fg);font-weight:500}
+.job h3{font-size:21px;letter-spacing:-.01em}
+.job .co{font-family:var(--display);color:var(--accent-ink);font-weight:500;margin:4px 0 10px}
+.job .ctx{color:var(--muted);font-size:15.5px;margin-bottom:10px}
+.job ul{margin:0;padding-left:18px;font-size:16px}
+.job li+li{margin-top:7px}
+.job li b{font-weight:600}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 36px}
+.skills h3{font-size:17px;margin-bottom:8px;font-weight:600}
+.skills p{font-size:15.5px;color:var(--muted)}
+
+/* credentials */
+.cred{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.cred>*{min-width:0}
+.cred ul{list-style:none;margin:0;padding:0}
+.cred li{padding-block:12px;border-top:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:16px}
+.cred li:first-child{border-top:0}
+.cred .yr{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:4px;white-space:nowrap}
+.cred b{display:block;font-family:var(--display);font-weight:600}
+.cred small{color:var(--muted);font-size:14.5px}
+
+/* contact */
+.contact h2{font-size:clamp(30px,4.5vw,46px);letter-spacing:-.02em;max-width:18ch}
+.contact .big{font-family:var(--display);font-size:18px;margin-top:14px;max-width:48ch}
+.clist{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-family:var(--display);font-size:16px}
+.copy{font:inherit;background:none;border:1px solid var(--rule);border-radius:4px;padding:2px 8px;cursor:pointer;color:var(--muted);font-size:13px;margin-left:6px}
+.copy:hover{color:var(--fg);border-color:var(--fg)}
+footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(--display);font-size:14px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .portrait{width:112px;height:112px;font-size:36px;order:-1}
+  .two,.cred{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr}
+  .shead{grid-template-columns:1fr}
+  section{padding-block:48px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .stat b{animation:rise .6s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+}
+</style>
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#top">Hitesh Naik</a>
+  <div class="links">
+    <a href="#arc">Career</a><a href="#deliverables">Deliverables</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<main id="top">
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="eyebrow">AI/ML Platforms · Data Products · Agentic AI</div>
+      <h1>Hitesh Naik</h1>
+      <p class="tag">AI/ML Product Leader — <em>platforms that data science teams actually adopt</em></p>
+      <div class="contact-row">
+        <span class="pill">Open to new roles</span>
+        <span>hiteshnaik@outlook.com</span>
+        <span>+91 99000 11770</span>
+        <a href="https://www.linkedin.com/in/hitesh-naik-08832912/">LinkedIn</a>
+        <span>Remote · Hyderabad · Bengaluru</span>
+      </div>
+    </div>
+    <div class="portrait" aria-label="Hitesh Naik">HN</div>
+  </header>
+
+  <div class="logos"><span>Delivered at</span><b>Walmart Global Tech</b><b>Huawei Technologies</b><b>Talking Trees Agro</b></div>
+
+  <div class="stats">
+    <div class="stat"><b>16+</b><span>Years in product, data and AI/ML platforms</span></div>
+    <div class="stat"><b>$230M</b><span>Savings enabled through Walmart's Finance Data Service</span></div>
+    <div class="stat"><b>$3.5M</b><span>Annual savings from the Enterprise Feature Store</span></div>
+    <div class="stat"><b>50%</b><span>Faster ML model development, weeks to days</span></div>
+    <div class="stat"><b>50+</b><span>Data science teams self-serving reusable features</span></div>
+    <div class="stat"><b>4,800+</b><span>Stores on modernised finance systems</span></div>
+    <div class="stat"><b>47 acres</b><span>Live satellite + AI crop-intelligence pilot</span></div>
+  </div>
+</div>
+
+<section id="about"><div class="wrap">
+  <div class="shead"><h2>What I do</h2><span class="sub">Positioning</span></div>
+  <div class="two">
+    <div class="prose">
+      <p>I take AI and data platforms from a product thesis to something an enterprise runs on: the roadmap, the governance, the adoption curve and the cost model, with engineering and data science in the same room.</p>
+      <p>Sixteen years across telecom, retail and fintech, most recently as a Staff Product Manager at Walmart Global Tech, where I owned the Enterprise Feature Store and the Unified Data Pipeline used across finance, retail and supply chain. Before that, nine years at Huawei moving telecom OSS platforms onto microservices and cloud, leading a 12-person cross-functional team and delivering on site in Ivory Coast, France, Shenzhen, Thailand, Singapore, the Philippines and other countries.</p>
+      <p>Today I am founding Talking Trees Agro, a satellite and AI crop-intelligence platform for smallholder farmers. It is the same discipline at a different scale: agentic workflows that watch the data, models with explicit evaluation criteria, and a human in the loop wherever a prediction is not confident enough to act on.</p>
+    </div>
+    <div class="chips">
+      <span>AI/ML platform product management</span><span>Feature stores &amp; MLOps</span><span>GenAI &amp; agentic AI strategy</span><span>Responsible AI &amp; guardrails</span><span>Data governance &amp; lineage</span><span>FinOps for AI compute</span><span>PaaS &amp; SaaS roadmaps</span><span>Build-vs-buy &amp; vendor management</span><span>Go-to-market &amp; launches</span><span>Executive alignment</span><span>Geospatial &amp; remote sensing</span><span>Mentoring PMs</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="arc" class="arc"><div class="wrap">
+  <div class="shead"><h2>Sixteen years, three eras</h2><span class="sub">2010 — present</span></div>
+  <div class="arcbox"><svg id="arcsvg" viewBox="0 0 1000 300" role="img" aria-label="Career timeline from 2010 to today across Huawei, Walmart Global Tech and Talking Trees Agro"></svg></div>
+  <p class="arcnote">Era boundaries are approximate; employer spans are exact.</p>
+</div></section>
+
+<section id="deliverables"><div class="wrap">
+  <div class="shead"><h2>Signature deliverables</h2><span class="sub">What shipped, and what it moved</span></div>
+  <div class="cards">
+    <article class="card">
+      <div class="eyebrow">Walmart Global Tech · Enterprise Feature Store</div>
+      <h3>A feature store 50+ data science teams chose to use</h3>
+      <p>Designed an API-first Feature Store with real-time and batch pipelines wired into Walmart's AI stack, a governance framework for feature definitions and ownership, and a metadata registry with lineage tracking for compliance.</p>
+      <div class="outcome"><i>Outcome</i>ML development 50% faster, feature engineering effort down 40%, $3.5M annual savings, adoption up 56% YoY.</div>
+    </article>
+    <article class="card">
+      <div class="eyebrow">Walmart Global Tech · Unified Data Pipeline</div>
+      <h3>One ETL/ELT platform across finance, retail and supply chain</h3>
+      <p>Owned the full lifecycle of the Unified Data Pipeline: API-first ingestion and transformation standards, observability and SLA monitoring, governance guardrails for onboarding, and a GenAI support assistant handling L0/L1 troubleshooting.</p>
+      <div class="outcome"><i>Outcome</i>$2.8M annual savings from retired redundant jobs, 35% YoY adoption, support productivity up 37%.</div>
+    </article>
+    <article class="card">
+      <div class="eyebrow">Walmart Global Tech · Finance Data Service</div>
+      <h3>CXO-level visibility for 4,800+ stores</h3>
+      <p>Defined the roadmap for a centralised Finance Data Service with SOE teams, replacing manual productivity tracking and forecasting with automated pipelines and executive dashboards.</p>
+      <div class="outcome"><i>Outcome</i>$230M in savings enabled by 2023, level of effort down 45%, cycle times down 27%.</div>
+    </article>
+    <article class="card">
+      <div class="eyebrow">Talking Trees Agro · Crop intelligence</div>
+      <h3>Satellite data turned into vernacular advice for farmers</h3>
+      <p>Authored the PRD and architecture for a mobile-first platform ingesting NDVI and multispectral imagery, geo-tagging farms and running an advisory engine built for low-connectivity rural areas. Agentic workflows monitor feeds, detect pest outbreaks and water stress, and push recommendations in the farmer's language.</p>
+      <div class="outcome"><i>Outcome</i>47-acre pilot live; targets of 5,000+ farmers, 85%+ advisory accuracy and 20–25% input-cost reduction in year one.</div>
+    </article>
+    <article class="card">
+      <div class="eyebrow">Talking Trees Agro · Responsible AI</div>
+      <h3>Guardrails before growth</h3>
+      <p>Set model evaluation criteria and human-in-the-loop review for advisory quality: every recommendation carries an explanation and a confidence score, and low-confidence predictions escalate to an agronomist instead of reaching a farmer.</p>
+      <div class="outcome"><i>Outcome</i>An advisory product that can be audited line by line before it scales to multi-district rollout.</div>
+    </article>
+    <article class="card">
+      <div class="eyebrow">Huawei · OSS platforms</div>
+      <h3>Telecom fault management rolled out across Africa and Singapore</h3>
+      <p>Led microservices adoption and migration of third-party OSS systems onto Huawei's IES cloud platform, directing planning and deployment of Ultra Large Scale FM systems with vendors and compliance teams.</p>
+      <div class="outcome"><i>Outcome</i>Deployment efficiency up 18%; multiple global rollouts on time and within budget.</div>
+    </article>
+  </div>
+  <blockquote>Adoption is the metric. A platform nobody self-serves on is a cost centre with a roadmap.</blockquote>
+  <p>Operating principle carried from the Feature Store to Talking Trees</p>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="shead"><h2>Experience</h2><span class="sub">2010 — present</span></div>
+
+  <div class="job">
+    <div class="meta"><b>Jul 2025 – Present</b>India<br>Pre-launch · 47-acre pilot</div>
+    <div>
+      <h3>Founder &amp; Product Lead</h3>
+      <p class="co">Talking Trees Agro Pvt Ltd</p>
+      <p class="ctx">Smallholder farmers rely on guesswork for irrigation, fertilisation and pest control. Talking Trees turns satellite crop data into actionable, vernacular advisory on a mobile app.</p>
+      <ul>
+        <li>Own the end-to-end product lifecycle: vision, PRD, platform architecture, AI/ML strategy and go-to-market, pending regulatory approvals.</li>
+        <li>Designing <b>agentic AI workflows</b> that monitor satellite feeds, detect anomalies and proactively push personalised recommendations.</li>
+        <li>Building ML models for pest detection, crop planning and yield prediction from climate, soil and historical yield data, with defined evaluation criteria and human-in-the-loop review.</li>
+        <li>Established responsible-AI guardrails: explainability, confidence scoring and escalation to agronomists for low-confidence predictions.</li>
+        <li>Defined SaaS + marketplace monetisation and a phased GTM from Vidarbha pilot districts to multi-district rollout through FPO and contract-farming partnerships.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="meta"><b>Apr 2024 – Jun 2025</b>India<br>50+ data science teams</div>
+    <div>
+      <h3>Staff Product Manager — Enterprise Feature Store</h3>
+      <p class="co">Walmart Global Tech</p>
+      <p class="ctx">Data science teams were duplicating feature engineering across inconsistent pipelines, delaying model deployment.</p>
+      <ul>
+        <li>Led development and adoption of the Feature Store, owning the roadmap and standardising real-time and batch feature pipelines.</li>
+        <li>Designed an <b>API-first Feature Store</b> enabling 50+ teams to self-serve reusable features; defined the governance framework for definitions, ownership and reuse.</li>
+        <li>Established a metadata registry and lineage tracking for transparency and compliance.</li>
+        <li><b>50% faster</b> model development, 40% less duplicated effort, $3.5M annual savings, 56% YoY adoption growth.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="meta"><b>Aug 2021 – Apr 2024</b>India<br>Finance · Retail · Supply chain</div>
+    <div>
+      <h3>Staff Product Manager — Unified Data Pipeline</h3>
+      <p class="co">Walmart Global Tech</p>
+      <p class="ctx">A fragmented ETL landscape created silos, high cost and little observability across critical business pipelines.</p>
+      <ul>
+        <li>Owned the product from strategy through delivery and adoption; evangelised the vision across finance, retail and supply chain pillars to align executives and engineers.</li>
+        <li>Designed API-first ETL/ELT workflows that standardised ingestion and transformation and enabled self-service onboarding.</li>
+        <li>Introduced a <b>GenAI-powered support assistant</b> for L0/L1 troubleshooting; support productivity up 37%.</li>
+        <li>$2.8M annual savings from retiring redundant jobs and compute waste; 35% YoY adoption; mentored junior PMs and product owners.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="meta"><b>May 2019 – Aug 2021</b>India<br>4,800+ stores</div>
+    <div>
+      <h3>Senior Product Manager — Finance Data Service</h3>
+      <p class="co">Walmart Global Tech</p>
+      <ul>
+        <li>Defined the roadmap and partnered with SOE teams to deliver a centralised Finance Data Service for productivity and cycle-time analytics.</li>
+        <li>Built pipelines and dashboards giving CXO-level visibility into performance, spend and productivity; replaced manual reporting with automation.</li>
+        <li><b>$230M in savings</b> enabled by 2023; level of effort down 45%; cycle times down 27%; stronger audit-readiness.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="meta"><b>Feb 2010 – May 2019</b>India · Ivory Coast · France · Shenzhen · Thailand · Singapore · Philippines<br>12-member team</div>
+    <div>
+      <h3>Business Analyst &amp; Engineering Manager — OSS Platforms</h3>
+      <p class="co">Huawei Technologies</p>
+      <ul>
+        <li>Led telecom product initiatives across microservices adoption, cloud migration and global fault-management deployments; managed a 12-person team across product, engineering and operations.</li>
+        <li>Migrated legacy third-party OSS systems into Huawei's Integrated Enterprise System cloud platform.</li>
+        <li>Deployed Ultra Large Scale FM systems across Africa and Singapore; deployment efficiency up 18%, rollouts on time and within budget.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="shead"><h2>Technical depth</h2><span class="sub">Product-owned, hands-on</span></div>
+  <div class="skills">
+    <div><h3>AI &amp; ML platform</h3><p>ML lifecycle management · feature stores, feature engineering and reusability · real-time and batch feature pipelines · model deployment and adoption · model evaluation criteria · MLOps</p></div>
+    <div><h3>GenAI &amp; agentic AI</h3><p>GenAI product strategy · prompt engineering · agentic workflows · autonomous and multi-agent orchestration · GenAI support assistants · LLMOps</p></div>
+    <div><h3>Responsible AI</h3><p>AI guardrails · explainability · confidence scoring · human-in-the-loop review · escalation design · model governance · AI risk and compliance</p></div>
+    <div><h3>Applied AI — geospatial &amp; agritech</h3><p>Satellite data ingestion · multispectral imagery and NDVI · remote sensing · geo-tagged farm mapping · pest detection, crop planning and yield prediction · precision agriculture · low-connectivity and edge inference</p></div>
+    <div><h3>Data engineering &amp; cloud</h3><p>Apache Airflow · Google Dataflow and DataFusion · Azure Data Factory · ETL/ELT · API-first pipeline design · data modelling · metadata and lineage · data quality · AWS, Azure, GCP · Oracle, SQL Server, Postgres, MySQL, MongoDB, Cosmos</p></div>
+    <div><h3>Product &amp; ways of working</h3><p>Product vision and roadmap · market research and GTM · PRDs and product architecture · JIRA, Productboard, Notion · SQL, Tableau, A/B testing · Agile, SAFe, Lean, Design Thinking · Figma, Mural · executive communication</p></div>
+  </div>
+</div></section>
+
+<section id="credentials"><div class="wrap">
+  <div class="shead"><h2>Credentials</h2><span class="sub">2 master's · 2 postgraduate programmes · 1 bachelor's</span></div>
+  <div class="cred">
+    <div>
+      <h3>Education</h3>
+      <ul>
+        <li><span class="yr">M.B.A.</span><div><b>Master of Business Administration</b><small>Deakin University, Australia</small></div></li>
+        <li><span class="yr">M.S.</span><div><b>Machine Learning &amp; Artificial Intelligence</b><small>Liverpool John Moores University, United Kingdom</small></div></li>
+        <li><span class="yr">PG Dip.</span><div><b>Machine Learning &amp; Artificial Intelligence</b><small>International Institute of Information Technology Bangalore · CGPA 3.5/4</small></div></li>
+        <li><span class="yr">PG</span><div><b>Business Administration &amp; Management</b><small>Institute of Management Technology, Ghaziabad · Grade A</small></div></li>
+        <li><span class="yr">B.E.</span><div><b>Electronics &amp; Communications Engineering</b><small>Rajiv Gandhi Prodyogiki Vishwavidyalaya (SVITS Indore), India</small></div></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Languages &amp; locations</h3>
+      <ul>
+        <li><span class="yr">Based</span><div><b>Remote · Hyderabad · Bengaluru</b><small>Open to remote roles or on-site in either city</small></div></li>
+        <li><span class="yr">Worked in</span><div><b>Ivory Coast · France · China (Shenzhen) · Thailand · Singapore · Philippines · India</b><small>On-site delivery across West Africa, Europe and Asia-Pacific, plus US-headquartered teams</small></div></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Let's talk about the platform you need adopted.</h2>
+  <p class="big">Open to Director and Staff/Principal Product roles in AI/ML platforms, data products and agentic systems — remote, or on-site in Hyderabad or Bengaluru.</p>
+  <div class="clist">
+    <span id="em">hiteshnaik@outlook.com<button class="copy" data-copy="hiteshnaik@outlook.com">copy</button></span>
+    <span>+91 99000 11770<button class="copy" data-copy="+919900011770">copy</button></span>
+    <a href="https://www.linkedin.com/in/hitesh-naik-08832912/">linkedin.com/in/hitesh-naik-08832912</a>
+  </div>
+</div></section>
+
+<div class="wrap"><footer><span>Hitesh Naik · India</span><span>Last updated October 2026</span></footer></div>
+</main>
+
+<script>
+(function(){
+  // Career arc: years on x, eras as bands, employer spans as bars.
+  var svg=document.getElementById('arcsvg');
+  var W=1000,H=300,L=56,R=24,top=44;
+  var y0=2010,y1=2026.9;
+  var x=function(y){return L+(y-y0)/(y1-y0)*(W-L-R)};
+  var eras=[
+    {from:2010,to:2019.4,label:'Telecom OSS & cloud platforms',cls:'era1'},
+    {from:2019.4,to:2025.5,label:'Enterprise data & ML platforms',cls:'era2'},
+    {from:2025.5,to:y1,label:'Applied & agentic AI',cls:'era3'}
+  ];
+  var jobs=[
+    {from:2010.1,to:2019.37,label:'Huawei',y:150},
+    {from:2019.37,to:2025.46,label:'Walmart Global Tech',y:150},
+    {from:2025.5,to:y1,label:'Talking Trees',y:150}
+  ];
+  var css=getComputedStyle(document.documentElement);
+  var c=function(n){return css.getPropertyValue('--'+n).trim()};
+  var s='';
+  eras.forEach(function(e){
+    s+='<rect x="'+x(e.from)+'" y="'+top+'" width="'+(x(e.to)-x(e.from))+'" height="60" fill="'+c(e.cls)+'"/>';
+    s+='<text x="'+(x(e.from)+10)+'" y="'+(top+36)+'" font-family="'+c('display')+'" font-size="14" font-weight="600" fill="'+c('fg')+'">'+e.label+'</text>';
+  });
+  jobs.forEach(function(j){
+    s+='<rect x="'+x(j.from)+'" y="'+j.y+'" width="'+(x(j.to)-x(j.from))+'" height="18" rx="2" fill="'+c('accent')+'"/>';
+    s+='<text x="'+x(j.from)+'" y="'+(j.y-10)+'" font-family="'+c('display')+'" font-size="14" fill="'+c('fg')+'">'+j.label+'</text>';
+  });
+  // axis
+  s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="200" y2="200" stroke="'+c('rule')+'"/>';
+  for(var yr=2010;yr<=2026;yr+=2){
+    s+='<line x1="'+x(yr)+'" x2="'+x(yr)+'" y1="196" y2="204" stroke="'+c('muted')+'"/>';
+    s+='<text x="'+x(yr)+'" y="222" text-anchor="middle" font-family="'+c('mono')+'" font-size="12" fill="'+c('muted')+'">'+yr+'</text>';
+  }
+  s+='<text x="'+(W-R)+'" y="222" text-anchor="end" font-family="'+c('mono')+'" font-size="12" fill="'+c('accent-ink')+'">Now</text>';
+  // milestones
+  var ms=[
+    {at:2019.4,label:'May 2019 — Finance Data Service, $230M savings enabled'},
+    {at:2024.3,label:'Apr 2024 — Enterprise Feature Store, 50+ DS teams'},
+    {at:2025.5,label:'Jul 2025 — Founded Talking Trees Agro'}
+  ];
+  ms.forEach(function(m,i){
+    var yy=250+i*18;
+    s+='<line x1="'+x(m.at)+'" x2="'+x(m.at)+'" y1="168" y2="'+(yy-5)+'" stroke="'+c('muted')+'" stroke-dasharray="2 3"/>';
+    s+='<circle cx="'+x(m.at)+'" cy="177" r="3.5" fill="'+c('fg')+'"/>';
+    var anchor=m.at>2023?'end':'start';
+    s+='<text x="'+(x(m.at)+(anchor==='end'?-6:6))+'" y="'+yy+'" text-anchor="'+anchor+'" font-family="'+c('mono')+'" font-size="11.5" fill="'+c('muted')+'">'+m.label+'</text>';
+  });
+  svg.innerHTML=s;
+
+  // copy buttons
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      var done=function(){b.textContent='copied';setTimeout(function(){b.textContent='copy'},1500)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(function(){sel()})}else sel();
+      function sel(){var r=document.createRange();r.selectNodeContents(b.parentNode.firstChild?b.parentNode:b);var g=window.getSelection();g.removeAllRanges();g.addRange(r)}
+    });
+  });
+})();
+</script>
+</body>
+</html>
