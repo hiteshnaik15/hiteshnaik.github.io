@@ -36,7 +36,7 @@
   --era1:#2a3530; --era2:#2f4a26; --era3:#4f8a2a; color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
 a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
@@ -98,6 +98,15 @@ section{padding-block:64px;border-top:1px solid var(--rule)}
 blockquote{margin:40px 0 0;font-family:var(--display);font-size:clamp(22px,3vw,30px);font-weight:500;max-width:26ch;letter-spacing:-.01em}
 blockquote+p{margin-top:8px;color:var(--muted);font-size:14px}
 
+.case-detail{border-top:1px solid var(--rule);padding-top:12px}
+.case-detail summary{font-family:var(--display);font-weight:600;color:var(--accent-ink);cursor:pointer;padding-block:4px}
+.case-detail dl{margin:14px 0 0}
+.case-detail dt{font-family:var(--display);font-size:14px;font-weight:600;margin-top:14px}
+.case-detail dd{margin:4px 0 0;font-size:15px;color:var(--muted)}
+.scope{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.scope h3{font-size:20px;margin-bottom:12px}
+.scope p{font-size:16px}
+.metric-note{font-size:14px;color:var(--muted);margin-top:20px;max-width:80ch}
 /* experience */
 .job{display:grid;grid-template-columns:220px 1fr;gap:12px 36px;padding-block:28px;border-top:1px solid var(--rule)}
 .job:first-of-type{border-top:0;padding-top:0}
@@ -154,7 +163,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(
 <nav class="nav"><div class="wrap">
   <a class="brand" href="#top">Hitesh Naik</a>
   <div class="links">
-    <a href="#arc">Career</a><a href="#deliverables">Deliverables</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+    <a href="#arc">Career</a><a href="#deliverables">Deliverables</a><a href="#leadership">Leadership</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
   </div>
 </div></nav>
 
@@ -182,7 +191,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(
     <div class="stat"><b>16+</b><span>Years in product, data and AI/ML platforms</span></div>
     <div class="stat"><b>$230M</b><span>Savings enabled through Walmart's Finance Data Service</span></div>
     <div class="stat"><b>$3.5M</b><span>Annual savings from the Enterprise Feature Store</span></div>
-    <div class="stat"><b>50%</b><span>Faster ML model development, weeks to days</span></div>
+    <div class="stat"><b>50%</b><span>Faster ML model development</span></div>
     <div class="stat"><b>50+</b><span>Data science teams self-serving reusable features</span></div>
     <div class="stat"><b>4,800+</b><span>Stores on modernised finance systems</span></div>
     <div class="stat"><b>47 acres</b><span>Live satellite + AI crop-intelligence pilot</span></div>
@@ -210,37 +219,41 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(
 </div></section>
 
 <section id="deliverables"><div class="wrap">
-  <div class="shead"><h2>Signature deliverables</h2><span class="sub">What shipped, and what it moved</span></div>
+  <div class="shead"><h2>Selected product work</h2><span class="sub">Problems, product choices and outcomes</span></div>
   <div class="cards">
     <article class="card">
       <div class="eyebrow">Walmart Global Tech · Enterprise Feature Store</div>
       <h3>A feature store 50+ data science teams chose to use</h3>
       <p>Designed an API-first Feature Store with real-time and batch pipelines wired into Walmart's AI stack, a governance framework for feature definitions and ownership, and a metadata registry with lineage tracking for compliance.</p>
       <div class="outcome"><i>Outcome</i>ML development 50% faster, feature engineering effort down 40%, $3.5M annual savings, adoption up 56% YoY.</div>
+      <details class="case-detail"><summary>Explore the product work</summary><dl><dt>The product problem</dt><dd>Data science teams were repeating feature engineering across inconsistent pipelines, slowing model development.</dd><dt>My ownership</dt><dd>Owned the roadmap and adoption of the Enterprise Feature Store, working across product, engineering and data science.</dd><dt>The product approach</dt><dd>Combined real-time and batch feature pipelines with self-service APIs. Feature definitions, ownership, a metadata registry and lineage made reusable features discoverable and governed.</dd><dt>Why it matters</dt><dd>The product brought reuse, governance and developer experience into the same platform. Its value was reflected in team adoption, reduced duplicated effort and faster model development.</dd></dl></details>
     </article>
     <article class="card">
       <div class="eyebrow">Walmart Global Tech · Unified Data Pipeline</div>
       <h3>One ETL/ELT platform across finance, retail and supply chain</h3>
       <p>Owned the full lifecycle of the Unified Data Pipeline: API-first ingestion and transformation standards, observability and SLA monitoring, governance guardrails for onboarding, and a GenAI support assistant handling L0/L1 troubleshooting.</p>
       <div class="outcome"><i>Outcome</i>$2.8M annual savings from retired redundant jobs, 35% YoY adoption, support productivity up 37%.</div>
+      <details class="case-detail"><summary>Explore the product work</summary><dl><dt>The product problem</dt><dd>Fragmented ETL workflows created data silos, redundant jobs and limited visibility across finance, retail and supply chain.</dd><dt>My ownership</dt><dd>Owned strategy, delivery and adoption; aligned executives and engineering teams across business pillars and mentored junior PMs and product owners.</dd><dt>The product approach</dt><dd>Standardised API-first ingestion and transformation, self-service onboarding, observability and SLA monitoring. Added a GenAI assistant for L0/L1 troubleshooting.</dd><dt>Why it matters</dt><dd>The scope extended beyond pipeline delivery to onboarding, ongoing support and compute cost. Retiring redundant jobs connected platform consolidation to annual savings.</dd></dl></details>
     </article>
     <article class="card">
       <div class="eyebrow">Walmart Global Tech · Finance Data Service</div>
       <h3>CXO-level visibility for 4,800+ stores</h3>
       <p>Defined the roadmap for a centralised Finance Data Service with SOE teams, replacing manual productivity tracking and forecasting with automated pipelines and executive dashboards.</p>
       <div class="outcome"><i>Outcome</i>$230M in savings enabled by 2023, level of effort down 45%, cycle times down 27%.</div>
+      <details class="case-detail"><summary>Explore the product work</summary><dl><dt>The product problem</dt><dd>Manual productivity tracking and reporting limited timely visibility into performance and spend across 4,800+ stores.</dd><dt>My ownership</dt><dd>Defined the Finance Data Service roadmap and partnered with SOE teams to deliver automated pipelines and executive dashboards.</dd><dt>The product approach</dt><dd>Centralised productivity and cycle-time analytics so executive stakeholders could work from consistent performance information.</dd><dt>Impact context</dt><dd>The service enabled $230M in savings by 2023. This is an enabled business outcome; my contribution was the product roadmap and delivery partnership for the supporting data service, during my May 2019–August 2021 tenure.</dd></dl></details>
     </article>
     <article class="card">
       <div class="eyebrow">Talking Trees Agro · Crop intelligence</div>
       <h3>Satellite data turned into vernacular advice for farmers</h3>
-      <p>Authored the PRD and architecture for a mobile-first platform ingesting NDVI and multispectral imagery, geo-tagging farms and running an advisory engine built for low-connectivity rural areas. Agentic workflows monitor feeds, detect pest outbreaks and water stress, and push recommendations in the farmer's language.</p>
-      <div class="outcome"><i>Outcome</i>47-acre pilot live; targets of 5,000+ farmers, 85%+ advisory accuracy and 20–25% input-cost reduction in year one.</div>
+      <p>Authored the PRD and architecture for a mobile-first platform ingesting NDVI and multispectral imagery, geo-tagging farms and running an advisory engine built for low-connectivity rural areas. Agentic workflows are being designed to monitor feeds, flag crop stress and support recommendations in the farmer's language.</p>
+      <div class="outcome"><i>Current stage</i>Pre-launch, with a live 47-acre pilot.</div>
+      <p class="sub">Year-one targets: 5,000+ farmers, 85%+ advisory accuracy and 20–25% lower input costs. These are goals, not measured pilot outcomes.</p>
     </article>
     <article class="card">
       <div class="eyebrow">Talking Trees Agro · Responsible AI</div>
       <h3>Guardrails before growth</h3>
-      <p>Set model evaluation criteria and human-in-the-loop review for advisory quality: every recommendation carries an explanation and a confidence score, and low-confidence predictions escalate to an agronomist instead of reaching a farmer.</p>
-      <div class="outcome"><i>Outcome</i>An advisory product that can be audited line by line before it scales to multi-district rollout.</div>
+      <p>Defined the advisory guardrails: explanations and confidence scores, model evaluation criteria, and human review. The intended workflow routes low-confidence predictions to an agronomist before a recommendation reaches a farmer.</p>
+      <div class="outcome"><i>Design requirement</i>Reviewable recommendations and an explicit escalation path before wider rollout.</div>
     </article>
     <article class="card">
       <div class="eyebrow">Huawei · OSS platforms</div>
@@ -249,8 +262,18 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(
       <div class="outcome"><i>Outcome</i>Deployment efficiency up 18%; multiple global rollouts on time and within budget.</div>
     </article>
   </div>
+  <p class="metric-note">Walmart figures describe reported outcomes of the respective products and programmes. The Finance Data Service figure is savings enabled by 2023; Feature Store and Unified Data Pipeline savings are annual figures. Talking Trees targets are prospective.</p>
   <blockquote>Adoption is the metric. A platform nobody self-serves on is a cost centre with a roadmap.</blockquote>
   <p>Operating principle carried from the Feature Store to Talking Trees</p>
+</div></section>
+
+<section id="leadership"><div class="wrap">
+  <div class="shead"><h2>Leadership in practice</h2><span class="sub">Across teams, platforms and markets</span></div>
+  <div class="scope">
+    <article><h3>Aligning an enterprise</h3><p>At Walmart, owned a shared data platform spanning finance, retail and supply chain. Connected executive priorities with engineering delivery through a common product vision, roadmap and adoption effort.</p></article>
+    <article><h3>Leading people and delivery</h3><p>At Huawei, managed a 12-person cross-functional team across product, engineering and operations, coordinating vendors and compliance teams for global deployments. At Walmart, mentored junior PMs and product owners.</p></article>
+    <article><h3>Building from the product thesis</h3><p>At Talking Trees, own vision, PRD, architecture, AI/ML strategy, monetisation and phased go-to-market. The current focus is a 47-acre pilot, with model evaluation and human review defined before broader expansion.</p></article>
+  </div>
 </div></section>
 
 <section id="experience"><div class="wrap">
@@ -355,7 +378,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(
       </ul>
     </div>
     <div>
-      <h3>Languages &amp; locations</h3>
+      <h3>Locations &amp; availability</h3>
       <ul>
         <li><span class="yr">Based</span><div><b>Remote · Hyderabad · Bengaluru</b><small>Open to remote roles or on-site in either city</small></div></li>
         <li><span class="yr">Worked in</span><div><b>Asia-Pacific · Gulf Cooperation Council · West Africa · Europe</b></div></li>
@@ -414,7 +437,7 @@ footer{padding-block:28px 40px;border-top:1px solid var(--rule);font-family:var(
   s+='<text x="'+(W-R)+'" y="222" text-anchor="end" font-family="'+c('mono')+'" font-size="12" fill="'+c('accent-ink')+'">Now</text>';
   // milestones
   var ms=[
-    {at:2019.4,label:'May 2019 — Finance Data Service, $230M savings enabled'},
+    {at:2019.4,label:'May 2019 — Joined Walmart, Finance Data Service'},
     {at:2024.3,label:'Apr 2024 — Enterprise Feature Store, 50+ DS teams'},
     {at:2025.5,label:'Jul 2025 — Founded Talking Trees Agro'}
   ];
